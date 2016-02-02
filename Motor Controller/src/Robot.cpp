@@ -19,6 +19,7 @@ class Robot : public SampleRobot {
 	Talon m_motor4;
 
 	bool shooterEnabled = false;
+	bool intakeEnabled = false;
 
 	// update every 0.005 seconds/5 milliseconds.
 	double kUpdatePeriod = 0.005;
@@ -37,18 +38,18 @@ public:
 	void OperatorControl() {
 		while (IsOperatorControl() && IsEnabled()) {
 			// Set the motor controller's output.
-			// This takes a number from -1 (100% speed in reverse) to +1 (100% speed forwards).
+			// Thss takes a number from -1 (100% speed in reverse) to +1 (100% speed forwards).
 			if(shooterEnabled == true)
 			{
 				m_motor.Set(0.5);
 				m_motor4.Set(-0.5);
-				shooterEnabled = true;
+				Wait(0.25);
 			}
 			if(shooterEnabled == false)
 			{
 				m_motor.Set(0);
 				m_motor4.Set(0);
-				shooterEnabled = false;
+				Wait(0.25);
 			}
 			if(m_stick.GetRawButton(1))
 			{
