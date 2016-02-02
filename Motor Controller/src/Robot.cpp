@@ -13,10 +13,10 @@ class Robot : public SampleRobot {
 	Joystick m_stick;
 
 	// The motor to control with the Joystick.
-	// This uses a Talon speed controller; use the Victor or Jaguar classes for
+	// This uses a Victor speed controller; use the Talon or Jaguar classes for
 	//   other speed controllers.
-	Talon m_motor;
-	Talon m_motor4;
+	Victor m_motor;
+	Victor m_motor4;
 
 	bool shooterEnabled = false;
 	bool intakeEnabled = false;
