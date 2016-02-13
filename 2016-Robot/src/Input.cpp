@@ -15,7 +15,7 @@ struct Input_Out
 	int triggerPressed, buttonPressed;
 	//Sensors
 	float returnGyroAngle;
-	float returnAccelX, returnAccelY, returnAccelz;
+	float returnAccelX, returnAccelY, returnAccelZ;
 	float returnDistance;
 };
 
