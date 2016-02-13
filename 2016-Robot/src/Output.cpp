@@ -35,7 +35,7 @@ public:
 	{
 		Output_Out output;
 
-		Wheels_In wIn;// Code here
+		Wheels_In wIn;
 		Wheels_Out wOut;
 		Lifter_In lfIn;
 		Lifter_Out lfOut;

@@ -3,7 +3,7 @@
 struct Wheels_In
 {
 	float xMovement, yMovement, rotation, gyroAngle;
-	int TurboMode; // 1: slow, 2: normal, 3: turbo
+	int turboMode; // 1: slow, 2: normal, 3: turbo
 };
 struct Wheels_Out
 {
