@@ -5,11 +5,18 @@
 
 struct Output_In
 {
+	//Wheels
+	float xMovement, yMovement, rotation, gyroAngle;
+	int turboMode;
+	//Lifter
+	float zMovement;
+	//Loader
+	float movement;
 
 };
 struct Output_Out
 {
-
+	//Nothing?
 };
 class Output
 {
@@ -28,7 +35,28 @@ public:
 	{
 		Output_Out output;
 
-		// Code here
+		Wheels_In wIn;// Code here
+		Wheels_Out wOut;
+		Lifter_In lfIn;
+		Lifter_Out lfOut;
+		Loader_In lIn;
+		Loader_Out lOut;
+
+		wIn.xMovement = input.xMovement;
+		wIn.yMovement = input.yMovement;
+		wIn.rotation = input.rotation;
+		wIn.gyroAngle = input.gyroAngle;
+		wIn.turboMode = input.turboMode;
+
+		wOut = wheels->Run(wIn);
+
+		lfIn.zMovement = input.zMovement;
+
+		lfOut = lifter->Run(lfIn);
+
+		lIn.movement = input.movement;
+
+		lOut = loader->Run(lIn);
 
 		return output;
 	}
