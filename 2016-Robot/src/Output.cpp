@@ -46,7 +46,7 @@ public:
 		wIn.yMovement = input.yMovement;
 		wIn.rotation = input.rotation;
 		wIn.gyroAngle = input.gyroAngle;
-		wIn.turboMode = input.turboMode;
+		wIn.TurboMode = input.turboMode;
 
 		wOut = wheels->Run(wIn);
 
