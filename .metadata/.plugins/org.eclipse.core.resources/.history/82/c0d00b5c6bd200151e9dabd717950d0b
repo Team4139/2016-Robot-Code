@@ -1,0 +1,9 @@
+#include "WPILib.h"
+#include "Math.h"
+class SensorCode: public IterativeRobot
+{
+public:
+	double getSonarDistance(){
+		return -1; // Return the current measured distance from the sonar
+	}
+};

@@ -1,0 +1,9 @@
+#include "WPILib.h"
+#include "Math.h"
+class Sonar: public SampleRobot
+{
+public:
+	double getDistance(){
+		return -1; // Return the current measured distance from the sonar
+	}
+};

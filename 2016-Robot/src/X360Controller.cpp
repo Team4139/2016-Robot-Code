@@ -1,3 +1,4 @@
+// Look andrew it exists
 #include "WPILib.h"
 #include "Math.h"
 
@@ -23,9 +24,9 @@ private:
 	Joystick* stick;
 public:
 	X360Controller()
-{
+	{
 		stick = new Joystick(5);
-}
+	}
 	X360Controller_Out Run(X360Controller_In input)
 	{
 		X360Controller_Out output;
@@ -49,6 +50,6 @@ public:
 	// Deadzone due to bad controllers
 	float ApplyDZ(float axis, float deadzone)
 	{
-		return fabs(axis) < deadzone ? 0 : (fabs(axis) - deadzone) / (1    - deadzone) * FindSign(axis);
+		return fabs(axis) < deadzone ? 0 : (fabs(axis) - deadzone) / (1	- deadzone) * FindSign(axis);
 	}
 };
